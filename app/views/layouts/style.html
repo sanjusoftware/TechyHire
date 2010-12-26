@@ -1,3 +1,12 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>TechyHire</title>
+  <%= stylesheet_link_tag :all %>
+  <%= javascript_include_tag :defaults %>
+  <%= csrf_meta_tag %>
+</head>
+
 <body>
 
 <!--header -->
@@ -11,25 +20,25 @@
 	<div  id="nav">
 		<ul>
 			<li><a href="/">Home</a></li>
-			<li><a href="style.html">Style Demo</a></li>
+			<li id="current"><a href="style.html">Style Demo</a></li>
 			<li><a href="blog.html">Blog</a></li>
-			<li id="current"><a href="archives.html">Archives</a></li>
+			<li><a href="archives.html">Archives</a></li>
 			<li><a href="/">Support</a></li>
 			<li><a href="/">About</a></li>
 		</ul>
 	</div>
 
-   <p id="rss">
-   	<a href="/">Grab the RSS feed</a>
-   </p>
+    <p id="rss">
+       <a href="/">Grab the RSS feed</a>
+    </p>
 
-   <form id="quick-search" method="get" action="/">
-   	<fieldset class="search">
-      	<label for="qsearch">Search:</label>
-         <input class="tbox" id="qsearch" type="text" name="qsearch" value="Search..." title="Start typing and hit ENTER" />
-         <button class="btn" title="Submit Search">Search</button>
-      </fieldset>
-   </form>
+    <form id="quick-search" method="get" action="/">
+       <fieldset class="search">
+          <label for="qsearch">Search:</label>
+          <input class="tbox" id="qsearch" type="text" name="qsearch" value="Search..." title="Start typing and hit ENTER" />
+          <button class="btn" title="Submit Search">Search</button>
+       </fieldset>
+    </form>
 
 <!--/header-->
 </div></div>
@@ -43,56 +52,186 @@
         <!-- main -->
 	    <div id="main">
 
-            <h2><a href="/">Archives for 2010</a></h2>
+            <div class="post">
 
-					<div class="navigation clear">
-						<div><a href="#" >&laquo; Older Entries</a></div>
-						<div><a href="#" >Newer Entries &raquo; </a></div>
-					</div>
+                <div class="right">
 
-					<ul class="archive">
+                    <h2><a href="/">A Blog Post</a></h2>
 
-						<li>
-							<div class="post-title"><a href="/">Suspendisse bibendum.</a></div>
-							<div class="post-details">Posted on <a href="/">January 31st, 2010</a> | Filed under <a href="/">templates</a>, <a href="/">internet</a></div>
-						</li>
-						<li>
-							<div class="post-title"><a href="/">Lorem ipsum dolor sit amet.</a></div>
-							<div class="post-details">Posted on <a href="/">January 30th, 2010</a> | Filed under <a href="/">templates</a></div>
-						</li>
-						<li>
-							<div class="post-title"><a href="/">In tristique orci porttitor ipsum.</a></div>
-							<div class="post-details">Posted on <a href="/">January 30th, 2010</a> | Filed under <a href="/">templates</a>, <a href="/">design</a></div>
-						</li>
-						<li>
-							<div class="post-title"><a href="/">Donec libero. Suspendisse bibendum.</a></div>
-							<div class="post-details">Posted on <a href="/">January 29th, 2010</a> | Filed under <a href="/">templates</a>, <a href="/">design</a></div>
-						</li>
-						<li>
-							<div class="post-title"><a href="/">Suspendisse bibendum.</a></div>
-							<div class="post-details">Posted on <a href="/">January 29th, 2010</a> | Filed under <a href="/">templates</a>, <a href="/">internet</a></div>
-						</li>
-						<li>
-							<div class="post-title"><a href="/">Lorem ipsum dolor sit amet.</a></div>
-							<div class="post-details">Posted on <a href="/">January 28th, 2010</a> | Filed under <a href="/">templates</a></div>
-						</li>
-						<li>
-							<div class="post-title"><a href="/">In tristique orci porttitor ipsum.</a></div>
-							<div class="post-details">Posted on <a href="/">January 28th, 2010</a> | Filed under <a href="/">templates</a>, <a href="/">design</a></div>
-						</li>
-						<li>
-							<div class="post-title"><a href="/">Donec mattis, purus nec placerat bibendum.</a></div>
-							<div class="post-details">Posted on <a href="/">January 27th, 2010</a> | Filed under <a href="/">templates</a>, <a href="/">design</a></div>
-						</li>
+                    <p class="post-info">Filed under <a href="/">templates</a>, <a href="/">internet</a></p>
 
-					</ul>
+                    <div class="image-section">
+              		    <img src="/images/img-post.jpg" alt="image post" height="200" width="500"/>
+         	    	  </div>
 
-					<div class="navigation clear">
-						<div><a href="#" >&laquo; Older Entries</a></div>
-						<div><a href="#" >Newer Entries &raquo; </a></div>
-					</div>
 
-        <!-- /main -->
+				    	  <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec libero. Suspendisse bibendum.
+					 	  Cras id urna. Morbi tincidunt, orci ac <a href="/">convallis aliquam</a>, lectus turpis varius lorem, eu
+				    	  posuere nunc justo tempus leo.</p>
+
+				    	  <p>
+				    	  Donec mattis, purus nec placerat bibendum, <a href="/">dui pede condimentum</a>
+					     odio, ac blandit ante orci ut diam. Cras fringilla magna. Phasellus suscipit, leo a pharetra
+					     condimentum, lorem tellus eleifend magna, <a href="/">eget fringilla velit</a> magna id neque. Curabitur vel urna.
+					     In tristique orci porttitor ipsum. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec libero. Suspendisse bibendum.
+					     Cras id urna. Morbi tincidunt, orci ac convallis aliquam, lectus turpis varius lorem, eu
+					     posuere nunc justo tempus leo.</p>
+
+                </div>
+
+                <div class="left">
+
+                    <p class="dateinfo">JAN<span>31</span></p>
+
+                    <div class="post-meta">
+                        <h4>Post Info</h4>
+                        <ul>
+                            <li class="user"><a href="#">Erwin</a></li>
+                            <li class="time"><a href="#">12:30 PM</a></li>
+                            <li class="comment"><a href="#">2 Comments</a></li>
+                            <li class="permalink"><a href="#">Permalink</a></li>
+                        </ul>
+							</div>
+
+                </div>
+
+				</div>
+
+            <h2><a href="/">Common XHTML Elements</a></h2>
+
+				<h3>Text and Image</h3>
+
+				<p><a href="http://getfirefox.com/"><img src="/images/firefox-gray.jpg" width="100" height="120" alt="firefox" class="float-left" /></a>
+				Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec libero. Suspendisse bibendum.
+				Cras id urna. Morbi tincidunt, orci ac convallis aliquam, lectus turpis varius lorem, eu
+				posuere nunc justo tempus leo. Donec mattis, purus nec placerat bibendum, dui pede condimentum
+				odio, ac blandit ante orci ut diam. Cras fringilla magna. Phasellus suscipit, leo a pharetra
+				condimentum, lorem tellus eleifend magna, eget fringilla velit magna id neque. Curabitur vel urna.
+				In tristique orci porttitor ipsum. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec libero. Suspendisse bibendum.
+				Cras id urna. Morbi tincidunt, orci ac convallis aliquam, lectus turpis varius lorem, eu
+				posuere nunc justo tempus leo.
+				</p>
+
+				<p>
+        	   A <a href="style.html">link</a>,
+				<acronym title="this really isn't a very good description">acronym</acronym>,
+				<strong>strong text</strong> and
+				<del>deleted text</del>.
+        		</p>
+
+				<h3>Code</h3>
+				<p><code>
+				code-sample { <br />
+				font-weight: bold;<br />
+				font-style: italic;<br />
+				}
+				</code></p>
+
+				<h3>Example Lists</h3>
+
+				<ol>
+					<li>Here is an example</li>
+					<li>of an ordered list</li>
+				</ol>
+
+				<ul>
+					<li>Here is an example</li>
+					<li>of an unordered list</li>
+				</ul>
+
+				<dl>
+            	<dt>Definition title</dt>
+            	<dd>Definition description</dd>
+            	<dt>Definition title</dt>
+            	<dd>Definition description</dd>
+         	</dl>
+
+				<h3>Blockquote</h3>
+
+				<blockquote>
+				<p>The credit belongs to the man who is actually in the arena;
+				whose face is marred by dust and sweat and blood; who strives valiantly;
+				who errs and comes short again and again; who knows the great enthusiasms,
+				the great devotions, and spends himself in a worthy cause;
+				who at the best knows in the end the triumph of high achievement;
+				and who at the worst, if he fails, at least fails while daring greatly.</p>
+				<p class="align-right"> - Theodore Roosevelt</p>
+				</blockquote>
+
+				<h3>Headers</h3>
+
+				<h1>H1 Heading</h1>
+				<h2>H2 Heading</h2>
+				<h3>H3 Heading</h3>
+				<h4>H4 Heading</h4>
+
+				<h3>Tabular Data</h3>
+				<table>
+					<tr>
+						<th>post date</th>
+						<th>title</th>
+						<th>description</th>
+					</tr>
+					<tr>
+						<td>01.18.2010</td>
+						<td>Augue non nibh</td>
+						<td>Commodo <a href="/">metus</a> vestibulum hdhdh djdjdj djdjdj</td>
+					</tr>
+					<tr>
+						<td>01.18.2010</td>
+						<td>Fusce ut diam</td>
+						<td>Purus in eget odio in sapien</td>
+					</tr>
+					<tr>
+						<td>01.17.2010</td>
+						<td>Augue non nibh</td>
+						<td>Adipiscing blandit </td>
+					</tr>
+					<tr>
+						<td>01.17.2010</td>
+						<td>Sed vestibulum</td>
+						<td>Cras <a href="/">lobortis</a> commodo </td>
+					</tr>
+				</table>
+
+				<h3>Contact Form</h3>
+
+				<form action="/" method="get" id="contactform">
+
+					<p class="no-border"><strong>Send me a message</strong></p>
+
+					<p>
+						<label for="subject">Subject</label><br />
+         			<select id="subject" name="subject" tabindex="1">
+           				<option value="1">Option One</option>
+          				<option value="2">Option Two</option>
+          	 			<option value="3">Option Three</option>
+         			</select>
+					</p>
+
+					<p>
+						<label for="name">Your Name</label><br />
+						<input id="name" name="name" value="Your Name" type="text" tabindex="2" />
+					</p>
+
+					<p>
+						<label for="email">Your Email Address</label><br />
+						<input id="email" name="email" value="Your Email" type="text" tabindex="3" />
+					</p>
+
+					<p>
+						<label for="message">Your Message</label><br />
+						<textarea id="message" name="message" rows="10" cols="20" tabindex="4"></textarea>
+					</p>
+
+					<p class="no-border">
+						<input class="button" type="submit" value="Submit" tabindex="5" />
+         			<input class="button" type="reset" value="Reset" tabindex="6" />
+					</p>
+
+				</form>
+
+       <!-- /main -->
 		</div>
 
       <!-- sidebar -->
@@ -235,8 +374,8 @@
       </ul>
 
       <p>Stay up to date. Subscribe via
-		<a href="/">RSS</a>, <a href="/">Facebook</a>,
-		<a href="/">Twitter</a> or <a href="/">Email</a>
+		<a href="index">RSS</a>, <a href="index">Facebook</a>,
+		<a href="index">Twitter</a> or <a href="index">Email</a>
 		</p>
 
 	</div>
@@ -361,4 +500,5 @@
 </div>
 
 </body>
+
 </html>

@@ -39,6 +39,43 @@ a:hover.more {
 	background-color: #FF3399;
 }
 
+#error, #alert {
+    background: none repeat scroll 0 0 #FFEBE8;
+    border: 1px solid #DD3C10;
+    margin: 5px 0px;
+    overflow: hidden;
+    padding: 5px;
+    line-height: 15px;
+    text-align: center;
+}
+
+#warning {
+    background: none repeat scroll 0 0 #ffffcc;
+    border: 1px solid #fbad03;
+    margin: 5px 0px;
+    padding: 5px;
+    overflow: hidden;
+    text-align: center;
+}
+
+#notice {
+    background: none repeat scroll 0 0 #ccffcc;
+    border: 1px solid #336600;
+    padding: 5px;
+    margin: 5px 0px;
+    overflow: hidden;
+    line-height: 15px;
+    text-align: center;
+}
+
+#form_error {
+    background: none repeat scroll 0 0 #FFEBE8;
+    overflow: hidden;
+    padding: 5px;
+    line-height: 10px;
+    text-align: center;
+}
+
 /* Headers */
 h1, h2, h3, h4 {
 	font: bold 1em/1.5em 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, Sans-Serif;
