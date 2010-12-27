@@ -20,9 +20,9 @@
     <div id="nav">
       <ul>
         <li id="current"><a href="/">Home</a></li>
-        <li><a href="style.html">Style Demo</a></li>
-        <li><a href="blog.html">Blog</a></li>
-        <li><a href="archives.html">Archives</a></li>
+        <li><a href="/style.html">Style Demo</a></li>
+        <li><a href="/blog.html">Blog</a></li>
+        <li><a href="/archives.html">Archives</a></li>
         <li><a href="/">Support</a></li>
         <li><a href="/">About</a></li>
         <% if user_signed_in? %>
@@ -47,7 +47,7 @@
     <form id="quick-search" method="get" action="/">
       <fieldset class="search">
         <label for="qsearch">Search:</label>
-        <input class="tbox" id="qsearch" type="text" name="qsearch" value="Search..." title="Start typing and hit ENTER"/>
+        <input class="tbox" id="qsearch" type="text" name="qsearch" value="Search..." title="Start typing and hit ENTER" onblur="if(this.value=='') this.value='Search...';" onfocus="if(this.value=='Search...') this.value='';"/>
         <button class="btn" title="Submit Search">Search</button>
       </fieldset>
     </form>
