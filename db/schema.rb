@@ -10,7 +10,21 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20101226145417) do
+ActiveRecord::Schema.define(:version => 20101228030718) do
+
+  create_table "addresses", :force => true do |t|
+    t.integer  "user_id"
+    t.string   "line1"
+    t.string   "line2"
+    t.string   "line3"
+    t.string   "country"
+    t.string   "state"
+    t.string   "zipcode"
+    t.integer  "addressable_id"
+    t.string   "addressable_type"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "users", :force => true do |t|
     t.string   "email",                               :default => "", :null => false
@@ -29,6 +43,10 @@ ActiveRecord::Schema.define(:version => 20101226145417) do
     t.string   "last_sign_in_ip"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "type"
+    t.string   "first_name"
+    t.string   "last_name"
+    t.string   "phone"
   end
 
   add_index "users", ["confirmation_token"], :name => "index_users_on_confirmation_token", :unique => true

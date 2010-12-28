@@ -1,4 +1,6 @@
 class User < ActiveRecord::Base
+  has_one :address, :as => :addressable
+
   # Include default devise modules. Others available are:
   # :token_authenticatable, :lockable, :timeoutable and :activatable
   devise :database_authenticatable, :registerable, :confirmable,
