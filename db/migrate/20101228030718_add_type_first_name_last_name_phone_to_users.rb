@@ -9,5 +9,8 @@ class AddTypeFirstNameLastNamePhoneToUsers < ActiveRecord::Migration
 
   def self.down
     remove_column :users, :type
+    remove_column :users, :first_name
+    remove_column :users, :last_name
+    remove_column :users, :phone
   end
 end

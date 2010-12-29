@@ -1,0 +1,21 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  position: MyString
+  location: MyString
+  description: MyText
+  openings: 1
+  desired_skills: MyText
+  desired_experience: 1
+  status: MyString
+  company_id: 1
+
+two:
+  position: MyString
+  location: MyString
+  description: MyText
+  openings: 1
+  desired_skills: MyText
+  desired_experience: 1
+  status: MyString
+  company_id: 1

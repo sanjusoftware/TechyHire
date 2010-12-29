@@ -1,4 +1,8 @@
 Techyhire::Application.routes.draw do
+  resources :companies
+
+  resources :jobs
+
   resources :addresses
 
   get "home/index"
