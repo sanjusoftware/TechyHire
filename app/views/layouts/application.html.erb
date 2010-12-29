@@ -64,7 +64,7 @@
 
     <% for name in [:warning, :alert, :error, :notice] %>
         <% if flash[name] %>
-            <div id=<%= name %>><%= flash[name] %></div><%= yield %>
+            <div id=<%= name %>><%= flash[name] %></div>
         <% end %>
     <% end %>
     <br/>
