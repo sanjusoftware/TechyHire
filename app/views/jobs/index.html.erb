@@ -1,37 +1,16 @@
-<h1>Listing jobs</h1>
+<h2>All Jobs</h2>
 
-<table>
-  <tr>
-    <th>Position</th>
-    <th>Location</th>
-    <th>Description</th>
-    <th>Openings</th>
-    <th>Desired skills</th>
-    <th>Desired experience</th>
-    <th>Status</th>
-    <th>Company</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
-
-<% @jobs.each do |job| %>
-  <tr>
-    <td><%= job.position %></td>
-    <td><%= job.location %></td>
-    <td><%= job.description %></td>
-    <td><%= job.openings %></td>
-    <td><%= job.desired_skills %></td>
-    <td><%= job.desired_experience %></td>
-    <td><%= job.status %></td>
-    <td><%= job.company_id %></td>
-    <td><%= link_to 'Show', job %></td>
-    <td><%= link_to 'Edit', edit_job_path(job) %></td>
-    <td><%= link_to 'Destroy', job, :confirm => 'Are you sure?', :method => :delete %></td>
-  </tr>
+<%= form_tag jobs_path, :method => 'get', :id => "jobs_search" do %>
+    <p>
+      <%= hidden_field_tag :direction, params[:direction] %>
+      <%= hidden_field_tag :sort, params[:sort] %>
+      <%= text_field_tag :search, params[:search] %>
+      <%= submit_tag "Search Jobs", :name => nil, :class => "button" %>
+    </p>
 <% end %>
-</table>
 
-<br />
+<div id="jobs"><%= render 'jobs' %></div>
 
-<%= link_to 'New Job', new_job_path %>
+<br/>
+
+<%= link_to 'Post New Job', new_job_path %>

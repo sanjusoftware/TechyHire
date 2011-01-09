@@ -12,10 +12,6 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :user_id %><br />
-    <%= f.text_field :user_id %>
-  </div>
-  <div class="field">
     <%= f.label :line1 %><br />
     <%= f.text_field :line1 %>
   </div>
@@ -40,6 +36,6 @@
     <%= f.text_field :zipcode %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit :class => "button"%>
   </div>
 <% end %>

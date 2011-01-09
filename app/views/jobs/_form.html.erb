@@ -40,10 +40,10 @@
     <%= f.text_field :status %>
   </div>
   <div class="field">
-    <%= f.label :company_id %><br />
-    <%= f.text_field :company_id %>
+    <%= f.label :for_company  %><br />
+    <%= f.select :company_id, options_from_collection_for_select(current_user.companies, 'id', 'name') %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit :class => "button" %>
   </div>
 <% end %>

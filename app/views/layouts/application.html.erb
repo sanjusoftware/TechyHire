@@ -19,10 +19,11 @@
 
     <div id="nav">
       <ul>
-        <li id="current"><a href="/">Home</a></li>
-        <li><a href="/style.html">Style Demo</a></li>
-        <li><a href="/blog.html">Blog</a></li>
-        <li><a href="/archives.html">Archives</a></li>
+        <li id=<%= @current.eql?("home") ? "current" : ""%>><a href="/">Home</a></li>
+        <li id=<%= @current.eql?("companies") ? "current" : ""%>>
+          <%= link_to 'Companies', companies_path %>
+        </li>
+        <li id=<%= @current.eql?("jobs") ? "current" : ""%>><%= link_to 'Jobs', jobs_path %></li>
         <li><a href="/">Support</a></li>
         <li><a href="/">About</a></li>
         <% if user_signed_in? %>
