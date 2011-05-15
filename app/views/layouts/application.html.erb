@@ -10,19 +10,10 @@
 <!--header -->
 <div id="header-wrap">
   <div id="header">
-
-    <a name="top"></a>
-
-    <h1 id="logo-text"><a href="/" title="">TechyHire</a></h1>
-
-    <p id="slogan">They are all here ! </p>
-
     <div id="nav">
       <ul>
         <li id=<%= @current.eql?("home") ? "current" : ""%>><a href="/">Home</a></li>
-        <li id=<%= @current.eql?("companies") ? "current" : ""%>>
-          <%= link_to 'Companies', companies_path %>
-        </li>
+        <li id=<%= @current.eql?("companies") ? "current" : ""%>><%= link_to 'Companies', companies_path %></li>
         <li id=<%= @current.eql?("jobs") ? "current" : ""%>><%= link_to 'Jobs', jobs_path %></li>
         <li><a href="/">Support</a></li>
         <li><a href="/">About</a></li>
@@ -40,20 +31,6 @@
         <% end %>
       </ul>
     </div>
-
-    <p id="rss">
-      <a href="/">Grab the RSS feed</a>
-    </p>
-
-    <form id="quick-search" method="get" action="/">
-      <fieldset class="search">
-        <label for="qsearch">Search:</label>
-        <input class="tbox" id="qsearch" type="text" name="qsearch" value="Search..." title="Start typing and hit ENTER" onblur="if(this.value=='') this.value='Search...';" onfocus="if(this.value=='Search...') this.value='';"/>
-        <button class="btn" title="Submit Search">Search</button>
-      </fieldset>
-    </form>
-
-    <!--/header-->
   </div>
 </div>
 
